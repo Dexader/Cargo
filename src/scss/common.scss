@@ -1,0 +1,27 @@
+.text {
+	@include adaptiveValue("font-size", 18, 14);
+	line-height: math.div(28, 18);
+}
+
+.title {
+	position: relative;
+	font-weight: 700;
+	@include adaptiveValue("font-size", 40, 28);
+	line-height: math.div(49, 40);
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	padding-top: rem(40);
+
+	&::before{
+		content:'';
+		display: block;
+		position: absolute;
+		width: rem(90);
+		height: rem(6);
+		background-color: $goldColor;
+		z-index: 100;
+		top: 0;
+		left: 0;
+
+	}
+}

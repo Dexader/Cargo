@@ -1,0 +1,79 @@
+//====================================================================================================
+
+.footer {
+	background-color: $goldColor;
+
+		&__container {
+		}
+
+		&__body {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding-block: rem(60) rem(55);
+			gap: rem(15);
+
+			@media (max-width:$mobile){
+				flex-direction: column;
+			}
+		}
+
+		&__contacts {
+			display: flex;
+			align-items: center;
+			gap: rem(10);
+
+			@media (max-width:$mobile){
+				flex-wrap: wrap;
+			}
+		}
+
+		&__logo {
+			@include adaptiveValue("padding-right", 20, 22);
+		}
+
+		&__address {
+			@include adaptiveValue("padding-right", 79, 25);
+		}
+
+		&__text {
+			@include adaptiveValue("font-size", 14, 10);
+			line-height: math.div(16, 14);
+			color: #F2F2F2;
+			opacity: 0.8;
+			margin-bottom: rem(10);
+		}
+
+		&__mail {
+			font-size: rem(14);
+			line-height: math.div(16, 14);
+			color: #2F343A;
+		}
+
+		&__phones {
+			display: flex;
+			flex: 1 1 auto;
+			flex-direction: column;
+			@include adaptiveValue("font-size", 14, 10);
+			line-height: math.div(16, 14);
+			color: #F2F2F2;
+			row-gap: rem(10);
+		}
+
+		&__phone {
+		}
+
+		&__dev {
+			font-size: rem(14);
+			line-height: math.div(16, 14);
+			color: #2F343A;
+			text-decoration: underline;
+			
+			&:link {
+				text-decoration: underline;
+			}
+		}
+}
+
+
+//====================================================================================================
